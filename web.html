@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bazsi | Linkek, Eszközök és Roller</title>
+    <meta name="description" content="Bazsi hivatalos oldala - Közösségi média linkek, setup specifikációk és roller adatok.">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #0a0a0c;
+            --card-bg: #16161e;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #8b5cf6; /* Lila */
+            --secondary-accent: #3b82f6; /* Kék */
+            --yt-color: #ff0000;
+            --twitch-color: #9146ff;
+            --tiktok-color: #00f2ea;
+            --discord-color: #5865F2;
+            --dark-accent-bg: #100c1a; /* Egy nagyon sötét, finom lilás háttérárnyalat */
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background: linear-gradient(135deg, var(--bg-color) 0%, var(--dark-accent-bg) 100%);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .profile-pic {
+            width: 100px;
+            aspect-ratio: 1 / 1;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            object-fit: cover;
+            border: 3px solid var(--accent-color);
+            display: block;
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+        }
+
+        h1 { margin-bottom: 5px; }
+        p.subtitle { color: var(--text-secondary); margin-top: 0; }
+
+        .section-title {
+            font-size: 1.2rem;
+            margin: 25px 0 15px;
+            border-left: 4px solid var(--secondary-accent);
+            padding-left: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .links-container {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .link-card {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s, border-color 0.2s;
+            border: 1px solid rgba(255,255,255,0.03);
+            outline: none;
+        }
+
+        .link-card:hover, .link-card:focus-visible {
+            transform: translateY(-2px);
+            background-color: #1e1e2a;
+            border-color: var(--accent-color);
+        }
+
+        .link-card:focus-visible {
+            box-shadow: 0 0 0 2px var(--accent-color);
+        }
+
+        .link-card i {
+            font-size: 1.5rem;
+            margin-right: 15px;
+            width: 30px;
+            text-align: center;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .gear-card {
+            background-color: var(--card-bg);
+            padding: 15px;
+            border-radius: 12px;
+            border: 1px solid rgba(255,255,255,0.02);
+        }
+
+        .gear-card.full-width { grid-column: span 2; }
+
+        .gear-label { font-size: 0.8rem; color: var(--text-secondary); display: block; }
+        .gear-name { font-weight: 600; font-size: 1rem; }
+
+        footer {
+            margin-top: 50px;
+            padding-bottom: 20px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+
+        /* Görgetősáv stílusa */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, var(--accent-color), var(--secondary-accent));
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-color);
+        }
+
+        @media (max-width: 480px) {
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+            .gear-card.full-width {
+                grid-column: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <main>
+            <header>
+                <img src="1000005895.jpg" alt="Bazsi profilkép" class="profile-pic" width="100" height="100">
+                <h1>Bazsi</h1>
+                <p class="subtitle">Üdvözöllek az oldalamon!</p>
+            </header>
+
+            <h2 class="section-title">Linkek</h2>
+            <nav class="links-container">
+                <a href="https://www.youtube.com/@bazsi02.05" class="link-card" target="_blank" rel="noopener noreferrer" style="border-left: 4px solid var(--yt-color);">
+                    <i class="fab fa-youtube" style="color: var(--yt-color);" aria-hidden="true"></i> YouTube
+                </a>
+                <a href="https://www.twitch.tv/bazsi0205" class="link-card" target="_blank" rel="noopener noreferrer" style="border-left: 4px solid var(--twitch-color);">
+                    <i class="fab fa-twitch" style="color: var(--twitch-color);" aria-hidden="true"></i> Twitch
+                </a>
+                <a href="https://www.tiktok.com/@bazsi0205?lang=hu-HU" class="link-card" target="_blank" rel="noopener noreferrer" style="border-left: 4px solid #fff;">
+                    <i class="fab fa-tiktok" aria-hidden="true"></i> TikTok
+                </a>
+                <a href="https://discord.gg/ZFMH5J49fN" class="link-card" target="_blank" rel="noopener noreferrer" style="border-left: 4px solid var(--discord-color);">
+                    <i class="fab fa-discord" style="color: var(--discord-color);" aria-hidden="true"></i> Discord szerver
+                </a>
+            </nav>
+
+            <h2 class="section-title">Eszközeim</h2>
+            <section class="grid-container">
+                <div class="gear-card"><span class="gear-label">Gép</span><div class="gear-name">Lenovo y700-15isk</div></div>
+                <div class="gear-card"><span class="gear-label">Telefon</span><div class="gear-name">Redmi Note 9 Pro</div></div>
+                <div class="gear-card"><span class="gear-label">Fejhallgató</span><div class="gear-name">Hyperx Cloud 3</div></div>
+                <div class="gear-card"><span class="gear-label">Egér</span><div class="gear-name">Yenkee YMS 3010 PRISMA</div></div>
+                <div class="gear-card full-width"><span class="gear-label">Egérpad</span><div class="gear-name">Asus Rog Sheath</div></div>
+            </section>
+
+            <h2 class="section-title">Roller</h2>
+            <section class="gear-card full-width">
+                <span class="gear-label">Modell</span>
+                <div class="gear-name">Kukirin g2 2026</div>
+            </section>
+        </main>
+
+        <footer>&copy; 2026 Bazsi - Minden jog fenntartva</footer>
+    </div>
+
+</body>
+</html>
